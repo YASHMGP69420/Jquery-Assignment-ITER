@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data Table</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#addRow').click(function() {
+                var name = $('#name').val();
+                var age = $('#age').val();
+        
+                if (name && age) {
+                    var newRow = '<tr><td>' + name + '</td><td>' + age + '</td></tr>';
+                    $('#studentTable tbody').append(newRow);
+                    $('#name').val('');
+                    $('#age').val('');
+                }
+            });
+        
+            $('#changeColor').click(function() {
+                $('#studentTable td').css('color', 'red');
+            });
+        });
+        
+    </script>
+</head>
+<body>
+    <table id="studentTable" border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>   
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John Doe</td>
+                <td>20</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <input type="text" id="name" placeholder="Name">
+    <input type="number" id="age" placeholder="Age">
+    <button id="addRow">Add Row</button>
+    <button id="changeColor">Change Color</button>
+</body>
+</html>

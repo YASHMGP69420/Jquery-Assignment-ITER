@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Element by ID</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#removeBtn').click(function() {
+                var elementId = $('#elementId').val();
+                $('#' + elementId).remove();
+            });
+        });
+        
+    </script>
+</head>
+<body>
+    <div id="content">
+        <p id="para1">This is paragraph 1</p>
+        <p id="para2">This is paragraph 2</p>
+    </div>
+    <input type="text" id="elementId" placeholder="Enter ID to remove">
+    <button id="removeBtn">Remove Element</button>
+</body>
+</html>

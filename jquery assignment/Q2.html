@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+       $(document).ready(function(){
+        let d=$("div");
+        d.click(function(){
+            d.text("CLICKED!");
+        })
+        d.dblclick(function(){
+            d.css("background-color","orange");
+        })
+        d.mouseenter(function(){
+            d.css("border-color","green")
+            })
+        d.mouseleave(function(){
+            d.css("border-color","black")
+        })
+        })
+       
+    </script>
+    <style>
+
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 400px;
+            width: 400px;
+            background-color: lightskyblue;
+            border: 3px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div><p>DIV</p></div>
+</body>
+</html>

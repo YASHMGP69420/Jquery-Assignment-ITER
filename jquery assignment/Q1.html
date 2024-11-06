@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            let b=$("body");
+            $(".red").click(function(){
+                b.css({"background-color":"red"})
+            })
+            $(".blue").click(function(){
+                b.css({"background-color":"blue"})
+            })
+            $(".green").click(function(){
+                b.css({"background-color":"green"})
+            })
+
+            $(".div").click(function(){
+                $("div").toggle();
+            })
+        })
+    </script>
+    <style>
+        div{
+            height: 50px;
+            width: 50px;
+            background-color: cyan ;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <button class="red">red</button>
+    <button class="green">green</button>
+    <button class="blue">blue</button>
+    <button class="div">visibility</button>
+</body>
+</html>

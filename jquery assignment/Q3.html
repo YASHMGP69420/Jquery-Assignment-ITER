@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".start").click(function(){
+                $("#sq").animate({
+                    "width":"400px",
+                },2000)
+            })
+            $(".stop").click(function(){
+                $("#sq").stop();
+            })
+        })
+    </script>
+    <style>
+        #sq{
+            background-color: red;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="sq"></div>
+    <button class="start">Start</button>
+    <button class="stop">Stop</button>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+          $(document).ready(function(){
+            $("#high").click(function(){
+                $("div").addClass("highlight");
+            })
+            $("#dimm").click(function(){
+                $("div").removeClass("highlight")
+                $("div").addClass("dim");
+            })
+          })
+    </script>
+    <style>
+        .highlight{
+            background-color: yellow;
+        }
+        .dim{
+            opacity: 0.1;
+        }
+        div{
+            border: 2px solid black;
+            height: 300px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <button id="high">Add highlight</button>
+    <button id="dimm">Add Dim</button>
+</body>
+</html>
